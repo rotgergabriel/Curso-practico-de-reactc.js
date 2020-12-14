@@ -3,11 +3,11 @@ import '../assets/styles/components/Categories.scss';
 
 const My_List = 'Mi lista';
 
-const Categories = ({ Children }) => (
+const Categories = ({ children }) => (
     (<div className="categories">
         <h3 className="categories__title">{My_List}</h3>
-        {Children}
+        {children}
     </div>)
-)
+);
 
 export default Categories;
