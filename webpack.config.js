@@ -37,8 +37,21 @@ module.exports = {
                     'css-loader',
                     'sass-loader',
                 ]
-            }
-        ],
+            },
+            {
+                rules: [
+                    {
+                        test: /\.(png|gif|jpg)$/,
+                            use: [
+                                {
+                                loader: 'file-loader',
+                                options: { name: 'assets/static/[hash].[ext]' },
+                            }
+                        ],
+                    },
+                ],
+            },
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -46,21 +59,7 @@ module.exports = {
             filename: './index.html',
         }),
         new MiniCssExtractPlugin({
-            filename: 'assets/[name].css'
-        })
+            filename: 'assets/[name].css',
+        }),
     ],
 };
-
-// module: {
-//     rules: [
-//         {   test: /\.js|jsx$/,
-//             exclude: /(node_modules)/, 
-//             use: {
-//                 loader: 'babel-loader',
-//                 options: {
-//                 presets: ['env', 'react'] 
-//                 } 
-//             } 
-//         } 
-//     ] 
-// }
