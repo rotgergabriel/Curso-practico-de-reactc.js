@@ -25,7 +25,7 @@ const Home = () => {
                 </Categories>
                 )}
 
-            <Categories title="Tendencias"> 
+            <Categories title="Tendencias">
                 <Carousel>
                     {
                         initialState.trends.map( item => 
