@@ -7,3 +7,4 @@ export const deleteFavorite = payload => ({
     type: 'DELETE_FAVORITE',
     payload
 });
+

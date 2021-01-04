@@ -27,7 +27,7 @@ const CarouselItem = (props) => {
                         src={playIcon} 
                         alt="Play Icon" 
                     />
-                    {isList ?
+                    {isList ? //ternario donde utilizamos la propiedad isList para determinar que icono se visualizara en myList...
                         <img
                             className="carousel-item__details--img" 
                             src={removeIcon} 

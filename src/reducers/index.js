@@ -1,6 +1,3 @@
-import { bindActionCreators } from "redux";
-import { setFavorite, deleteFavorite } from "../actions";
-
 const reducer = (state, action) => {
     
     switch(action.type) {

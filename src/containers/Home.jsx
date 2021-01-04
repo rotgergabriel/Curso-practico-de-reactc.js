@@ -18,7 +18,7 @@ const Home = ( { myList, trends, originals }) => {
                             <CarouselItem  
                                 key={item.id} 
                                 {...item}
-                                isList
+                                isList //property -> propiedad;
                             />
                         )                    
                     }
