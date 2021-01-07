@@ -11,3 +11,6 @@ const useInitialState = (API) => {
 };
 
 export default useInitialState;
+
+
+//sin uso, reemplazado por api en index.js

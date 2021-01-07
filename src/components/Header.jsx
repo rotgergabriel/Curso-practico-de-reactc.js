@@ -9,7 +9,7 @@ import userIcon from '../assets/static/user-icon.png';
 
 const Profile = 'Perfil';
 const Account = 'Cuenta';
-const SignOut = 'Cerrar sesion';
+const SignOut = 'Cerrar sesión';
 const SignIn = 'Iniciar Sesión';
 
 const Header = props => {
@@ -28,7 +28,7 @@ const Header = props => {
             <div className="header__menu">
                 <div className="header__menu--profile">
                     {hasUser ? 
-                        <img className="gravatar_profile" src={gravatar(user.email)} alt={user.email} /> :
+                        <img className="gravatar_profile" src={gravatar(user.email)} alt={user.email} />:
                         <img src={userIcon} alt="User Icon" />
                     }
                     <p>{Profile}</p>
@@ -36,8 +36,11 @@ const Header = props => {
                 <ul>
                     {hasUser ?
                         <li><a href="/">{user.name}</a></li>
-                        : 
-                        null
+                        : null
+                    }
+                    {hasUser ?
+                        <li><a href="/Account">{Account}</a></li>
+                        : null
                     }
                     {hasUser ?
                         <li><a href="/login" onClick={handleLogout}>{SignOut}</a></li>
