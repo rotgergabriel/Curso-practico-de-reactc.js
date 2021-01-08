@@ -7,6 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'), //__dirname es el dirctorio donde nos encontramos y dist es el directorio donde vamos a guardar nuestros archivos
         filename: 'bundle.js', // usamos filename para ponerle un nombre a nuestro archivo principal y luego definimos el nombre del archivo bundle.js
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.js', '.jsx'],

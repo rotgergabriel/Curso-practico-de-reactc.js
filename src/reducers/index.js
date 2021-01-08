@@ -27,7 +27,12 @@ const reducer = (state, action) => {
             return{
                 ...state,
                 user: action.payload
-            } 
+            }
+        case 'GET_VIDEO_SOURCE':
+            return{
+                ...state,
+                playing: [...state.trends, ...state.originals].find(item => item.id === Number(action.payload)) || []
+            }
         default:
             return state;
     }

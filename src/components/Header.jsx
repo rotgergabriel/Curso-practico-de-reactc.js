@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 import { gravatar } from '../utils/gravatar';
 import { logoutRequest } from '../actions';
 import '../assets/styles/components/Header.scss';
@@ -13,15 +14,17 @@ const SignOut = 'Cerrar sesión';
 const SignIn = 'Iniciar Sesión';
 
 const Header = props => {
-    const { user } = props;
+    const { user, isLogin } = props;
     const hasUser = Object.keys(user).length > 0;
 
     const handleLogout = () => {
         props.logoutRequest({}) //simulation
     }
-
+    const headerClass = classNames('header', {
+        isLogin,
+    });
     return(
-        <header className="header">
+        <header className={headerClass}>
             <Link to="/">
                 <img className="header__img" src={logo} alt="Platzi Video" />
             </Link>
